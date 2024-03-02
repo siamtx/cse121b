@@ -7,3 +7,8 @@ radius = 4;
 area = radius * radius * pi;
 
 let firstName = Antonia Francesa;
+
+
+document.querySelector("html").addEventListener("click", function () {
+    alert("Ouch! Stop poking me!");
+  });
