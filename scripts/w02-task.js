@@ -10,20 +10,22 @@ let profilePicture = 'images/Tim Howell.jpg';
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name');
-const foodElement = document.getElementById('food');
-const yearElement = document.getElementById('#year');
-const imageElement = document.querySelector('pic');
+const foodElement = document.querySelector('food');
+const yearElement = document.querySelector('#year');
+const imageElement = document.querySelector('profilePicture');
 
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
-
-
-dfbadsfhbsfg;
+foodElement.textContent = `currentYear`;
+imageElement.setAttribute("images/Tim Howell.jpg", profilePicture);
+imageElement.setAttribute('alt', "Profile image of [profilePicture");
 
 
 /* Step 5 - Array */
-
+let food = ["Pizza", "Tacos", "Fried Chicken", "Rice", "Beans"];
+let secondFood = "Brownies";
+food.push(`${secondFood}`);
 
 
 
