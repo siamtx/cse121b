@@ -24,10 +24,12 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
 let faveFood = ["Pizza", "Tacos", "Fried Chicken", "Rice", "Beans"];
-foodElement.innerHTML + `<br> ${faveFood}`;
+foodElement.innerHTML +=`<br>${faveFood}`;
 
 let secondFood = "Brownies";
-food.push(`${secondFood}`);
+faveFood.push(secondFood);
+foodElement.innerHTML +=`<br>${faveFood}`;
+
 
 
 
