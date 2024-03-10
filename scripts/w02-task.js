@@ -17,7 +17,7 @@ const imageElement = document.querySelector('profilePicture');
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
-foodElement.textContent = `currentYear`;
+foodElement.textContent = 'currentYear';
 imageElement.setAttribute("images/Tim Howell.jpg", profilePicture);
 imageElement.setAttribute('alt', "Profile image of [profilePicture");
 
