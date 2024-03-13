@@ -23,11 +23,23 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
-let faveFood = ["Pizza", "Tacos", "Fried Chicken", "Rice", "Beans"];
+/* Step 5.1 Declare an array */
+let faveFood = ["Pizza", " Tacos", " Fried Chicken", " Rice", " Beans"];
+/* Step 5.2 Display array */
 foodElement.innerHTML +=`<br>${faveFood}`;
-
-let secondFood = "Brownies";
+/* Step 5.3 Additional food variable */
+let secondFood = " Brownies";
+/* Step 5.4 Add new food item to the array */
 faveFood.push(secondFood);
+/* Step 5.5 Display new array */
+foodElement.innerHTML +=`<br>${faveFood}`;
+/* Step 5.6 Remove first element of array */
+faveFood.shift();
+/* Step 5.7 Display modified array; first element removed */
+foodElement.innerHTML +=`<br>${faveFood}`;
+/* Step 5.8 Remove last element in array */
+faveFood.pop();
+/* Step 5.9 Display array with first and last elements missing */
 foodElement.innerHTML +=`<br>${faveFood}`;
 
 
