@@ -2,7 +2,17 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
+function add(number1, number2)
+{
+    return (number1 + number2);
+}
 
+function addNumbers(num1, num2)
+{
+    let addNumber1 = Number.document.querySelector();
+    num1 = document.getElementById("num1");
+    num2 = document.getElementById("num2");
+}
 
 /* Function Expression - Subtract Numbers */
 
