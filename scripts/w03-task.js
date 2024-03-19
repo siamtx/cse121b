@@ -7,12 +7,14 @@ function add(number1, number2)
     return (number1 + number2);
 }
 
-function addNumbers(num1, num2)
+function addNumbers(number1, number2)
 {
     let addNumber1 = Number.document.querySelector();
-    num1 = document.getElementById("num1");
-    num2 = document.getElementById("num2");
+    number1 = document.getElementById("#add1");
+    number2 = document.getElementById("#add2");
+    document.querySelector('#sum').value = add(number1, number2);  
 }
+document.querySelector('#addnumbers').addEventListener('click', addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
