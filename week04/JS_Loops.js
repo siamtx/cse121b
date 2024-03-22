@@ -19,3 +19,10 @@ myInfo = {
       },
     ],
   };
+
+// Write a .forEach() to loop over an array and output to <ul>.
+myInfo.forEach((element)) => document.createElement(<ul>' '</ul>);
+
+
+// Writea .map() to loop over adn array and output to <ul>.
+const mapInfo = myInfo.map((x)) =>document.createElement(<ul>' '</ul>);
