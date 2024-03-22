@@ -27,16 +27,12 @@ function subtractNumbers(number1, number2){
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-function multiply(factor1, factor2)
-{
-    return (factor1 * factor2);
-}
+let multiply = (number1, number2) => number1 * number2;
 
-function multiplyNumbers(factor1, factor2)
-{
-    let multifact1 = Number(document.querySelector('#factor1').value);
-    let multifact2 = Number(document.querySelector('#factor2').value);
-    document.querySelector('#product').value = multiplyNumbers(multifact1, multifact2);
+function multiplyNumbers(number1, number2){
+    const multiplyNumber1 = Number(document.querySelector('#factor1').value);
+    const multiplyNumber2 = Number(document.querySelector('#factor2').value);
+    document.querySelector('#product').value = multiplyNumbers(multiplyNumber1, multiplyNumber2);
 }
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
