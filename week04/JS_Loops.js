@@ -20,9 +20,26 @@ myInfo = {
     ],
   };
 
+
+
 // Write a .forEach() to loop over an array and output to <ul>.
-myInfo.forEach((element)) => document.createElement(<ul>' '</ul>);
+
+//const foodsElement = document.querySelector('#favorite-foods');
+//function createAndAppendFoodItem(food){
+//  let favoriteFood = document.createElement('li');
+//  favoriteFood.textContent = food;
+//  foodsElement.appendChild(favoriteFood);
+//}
+//myInfo.favoriteFoods.forEach(createAndAppendFoodItem);
 
 
 // Writea .map() to loop over adn array and output to <ul>.
-const mapInfo = myInfo.map((x)) =>document.createElement(<ul>' '</ul>);
+const foodsElement = document.querySelector('#favorite-foods');
+function mapFoodItem(food) {
+  let favoriteFood = document.createElement('li');
+  favoriteFood.textContent = food;
+  return favoriteFood;
+} 
+const foodListElements = myInfo.favoriteFoods.map(map.FoodItem);
+
+foodsElement.innerHTML = foodListElements.join();
