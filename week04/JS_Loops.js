@@ -35,7 +35,7 @@ myInfo = {
 
 // Writea .map() to loop over adn array and output to <ul>.
 const foodsElement = document.querySelector('#favorite-foods');
-function mapFoodItem(food) {
+mapFoodItem(food) {
   let favoriteFood = document.createElement('li');
   favoriteFood.textContent = food;
   return favoriteFood;
