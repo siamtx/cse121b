@@ -1,23 +1,24 @@
 /* W05: Programming Tasks */
 
 /* Declare and initialize global variables */
-const templesElement = document.querySelector('#temples').textContent;
-const templeList = [];
+const templesElement = document.querySelector('#temples');
+let templeList = [];
 
 /* async displayTemples Function */
-const displayTemples = (templeList) => {
-    templeList.forEach(x => {
-        const newArticle = document.createElement("ARTICLE");
+const displayTemples = (temples) => {    
+    temples.forEach((temple) => {
+        const newTemple = document.createElement("article");
 
         const newH3 = document.createElement("h3");
-        newH3.textContent =  templeList[x].templeName;
+        newH3.textContent =  temple.templeName;
 
         const newImage = document.createElement("img");
-        newImage.src = templeList[x].imageUrl;
-        newImage.alt = templeList[x].location;
+        newImage.src = temple.imageUrl;
+        newImage.alt = temple.location;
 
-        document.querySelector("h3").appendChild(newImage);
-        document.querySelector("article").appendChild(newH3);
+        newTemple.appendChild(newH3);
+        newTemple.appendChild(newImage);
+        templesElement.appendChild(newTemple);
         
     });
 };
@@ -25,42 +26,48 @@ const displayTemples = (templeList) => {
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-        if (response.ok){
-        const data = await response.json();
-        console.log[data];
-        }
-displayTemples(templeList);
+    if (response.ok ){
+        templeList = await response.json();
+        displayTemples(templeList);
+    }
+    else (
+        console.error(response)
+    )
 };
 
 /* reset Function */
-document.querySelector('article').reset(templeList);
+let reset = () => {
+    while (templesElement.firstChild) {
+        templesElement.removeChild(templesElement.firstChild);
+    }
+};
 
 /* filterTemples Function */
 function filterTemples(templeList){
     reset();
+    let tl = [];
     const filter = document.querySelector('#filtered').value;
     switch(filter){
-        case 0:
-            filter = "utah";
-            displayTemples.location("#utah");
+        case 'utah':
+            tl = templeList.filter((temple) => temple.location.toLowerCase().includes('utah'));
+            displayTemples(tl);
             break;
-        case 1:
-            filter = "notutah";
-            displayTemples.location("#notutah");
+        case 'notutah':
+            tl = templeList.filter((temple) => !temple.location.toLowerCase().includes('utah'));
+            displayTemples(tl);          
             break;
-        case 2:
-            filter = "older";
-            displayTemples.dedicated > Date.parse('1950');
+        case 'older':
+            tl = templeList.filter((temple) => Date.parse(temple.dedicated) < Date.parse('1950, 1,1'));
+            displayTemples(tl);
             break;
-        case 3:
-            filter = "all";
-            displayTemples.location(temples);
+        case 'all':
+            displayTemples(templeList);
             break;
 
     }
-document.querySelector('#filtered').addEventListener('change', () => { filterTemples(templelist) });
 };
 
 getTemples();
-console.log[templeList];
+
 /* Event Listener */
+document.querySelector("#filtered").addEventListener("change", () => { filterTemples(templeList) });
