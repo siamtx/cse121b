@@ -1,5 +1,3 @@
-
-
 /* declare and instantiate global variables */
 const containerForHeadlines = document.querySelector('#headlines');
 let newsList = [];
